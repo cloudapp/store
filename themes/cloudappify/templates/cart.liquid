@@ -1,0 +1,59 @@
+<section class="pie-clearfix" id="cart">
+  <aside>
+    <hgroup>
+      <h3>This is a sidebar</h3>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </hgroup>
+  </aside>
+
+  {% if cart.item_count == 0 %}
+    <p>
+      Your cart is empty.
+    </p>
+  {% else %}
+    <form action="/cart" class="pie-clearfix" id="cart-form" method="post" name="cartform">
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Delete</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for item in cart.items %}
+            <tr>
+              <td class="title"><a href="{{ item.product.url }}">{{ item.title }}</a></td>
+              <td class="price">{{ item.price | money }}</td>
+              <td class="quantity"><input id="updates-{{ item.variant.id }}" name="updates[{{item.variant.id}}]" onfocus="this.select();" type="text" value="{{ item.quantity }}" /></td>
+              <td class="remove"><a href="#" onclick="remove_item({{ item.variant.id }}); return false;">Remove</a></td>
+              <td class="total"><strong>{{ item.line_price | money }}</strong></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+
+        <tfoot>
+          <td colspan="5">Total: {{ cart.total_price | money }}</td>
+        </tfoot>
+      </table>
+
+      <p class="right">
+        <input class="left" id="update" name="update" type="submit" value="Update" />
+        <input class="left green" id="checkout" name="checkout" type="submit" value="Checkout" />
+      </p>
+    </form>
+
+    <script type="text/javascript">
+      function remove_item(id) {
+        document.getElementById('updates-'+id).value = 0;
+        document.getElementById('cart-form').submit();
+      }
+    </script>
+  {% endif %}
+</section>

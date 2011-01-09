@@ -1,0 +1,128 @@
+/*
+  title: store css
+  author: maximilian schoening (@mschoening)
+*/
+
+/* =index
+---------------------------------------------- */
+#index #plans {
+  text-align: center;
+}
+
+#index #plans hgroup {
+  background: url("index-hgroup-bg.png") center top no-repeat;
+  padding: 180px 0 0 0;
+}
+
+#index #plans hgroup h1 {
+  font-size: 48px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  margin: 0 0 24px 0;
+}
+
+#index #plans form fieldset label {
+  color: #a7a7a7;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+#index #plans form p input[type="submit"] {
+  margin: 0 auto;
+}
+
+#index #description {
+  padding: 48px 0 0 0;
+}
+
+#index #description .column {
+  border-top: 1px solid #e5e5e5;
+  float: left;
+  margin: 0 48px 0 0;
+  padding: 12px 0 0 0;
+  width: 288px;
+}
+
+#index #description .column:last-child {
+  margin: 0;
+}
+
+#index #description .column h2 {
+  font-weight: normal;
+}
+/* ------------------------------------------- */
+
+/* =cart
+---------------------------------------------- */
+#cart aside {
+  border-top: 1px solid #e5e5e5;
+  float: left;
+  margin: 0 32px 0 0;
+  padding: 12px 0 0 0;
+  width: 204px;
+}
+
+#cart form {
+  float: left;
+  width: 724px;
+}
+
+#cart form table {
+  width: 100%;
+}
+
+#cart form table thead tr th {
+  border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 8px;
+  text-align: center;
+}
+
+#cart form table thead tr th:first-child {
+  text-align: left;
+}
+
+#cart form table thead tr th:last-child {
+  text-align: right;
+}
+
+#cart form table tbody tr td {
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 13px;
+  padding: 12px 8px;
+  text-align: center;
+}
+
+#cart form table tbody tr td:first-child {
+  text-align: left;
+}
+
+#cart form table tbody tr td:last-child {
+  text-align :right;
+}
+
+#cart form table tbody tr .quantity {
+  width: 60px;
+}
+
+#cart form table tbody tr .quantity input[type="text"] {
+  text-align: center;
+  width: 46px;
+}
+
+#cart form table tfoot tr td {
+  font-size: 24px;
+  padding: 24px 8px;
+  text-align: right;
+}
+
+#cart #update {
+  margin: 0 12px 0 0;
+}
+
+#cart #checkout {
+  margin: 0 8px 0 0;
+}
+/* ------------------------------------------- */

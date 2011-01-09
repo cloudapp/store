@@ -1,0 +1,49 @@
+<section class="pie-clearfix" id="index">
+  <section id="plans">
+    {% for product in collections.frontpage.products limit: 1 %}
+      <hgroup>
+        <h1>{{ product.title }}</h1>
+      </hgroup>
+
+      <form>
+        <fieldset>
+          {% for variant in product.variants %}
+            {% if variant.available %}
+              <label><input name="plan" type="radio" /> {{ variant.title | escape }} &mdash; {{ variant.price | money }}</label>
+            {% endif %}
+          {% endfor %}
+        </fieldset>
+
+        <p>
+          <input class="green" type="submit" value="Get {{ product.title }}" />
+        </p>
+      </form>
+    {% endfor %}
+  </section>
+
+  <section id="description">
+    <div class="column">
+      <h2>Turbocharge Your Account</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+
+    <div class="column">
+      <h2>No Contract</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+
+    <div class="column">
+      <h2>Secure Online Payment</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+  </section>
+</section>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="no-js" dir="ltr" lang="en">
+  <head>
+    <title>{{ shop.name }} &mdash; {{ page_title }}</title>
+
+    <meta charset="utf-8">
+
+    <!--[if !IE 6]><!-->
+    {{ 'screen.css' | asset_url | stylesheet_tag }}
+    <!--<![endif]-->
+
+    {{ 'jquery-1.4.4.min.js' | shopify_asset_url | script_tag }}
+    {{ 'modernizr-1.6.min.js' | shopify_asset_url | script_tag }}
+
+    <!--[if IE 6]>
+    <link href="https://universal-ie6-css.googlecode.com/files/ie6.0.3.css" rel="stylesheet">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    {{ 'selectivizr-1.0.min.js' | shopify_asset_url | script_tag }}
+    <![endif]-->
+
+    {{ content_for_header }}
+  </head>
+
+  <body>
+    <div id="sheet">
+      <header id="header">
+        <nav id="nav">
+          <ul>
+            <li><a href="http://getcloudapp.com/">Application</a></li>
+            <li><a href="http://store.getcloudapp.com/">Store</a></li>
+            <li><a href="http://blog.getcloudapp.com/">Blog</a></li>
+            <li><a href="http://help.getcloudapp.com/">Help</a></li>
+          </ul>
+        </nav>
+
+        <hgroup id="hgroup">
+          <h1><a href="/">CloudApp</a></h1>
+          <h2><strong>Cloud</strong>App Store</h2>
+        </hgroup>
+      </header>
+
+      <section id="main">
+        <div class="wrapper">
+          {{ content_for_layout }}
+        </div>
+      </section>
+    </div>
+
+    <footer id="footer">
+      <div class="pie-clearfix wrapper">
+        <nav>
+          <ul>
+            <li><strong>CloudApp</strong></li>
+            <li><a href="http://getcloudapp.com/">Applications</a></li>
+            <li><a href="https://store.getcloudapp.com/">Store</a></li>
+            <li><a href="http://developer.getcloudapp.com/">Developer</a></li>
+          </ul>
+
+          <ul>
+            <li><strong>Help</strong></li>
+            <li><a href="http://help.getcloudapp.com/">FAQ</a></li>
+            <li><a href="http://support.getcloudapp.com/">Support</a></li>
+            <li><a href="http://help.getcloudapp.com/contact/">Contact Us</a></li>
+          </ul>
+
+          <ul>
+            <li><strong>Updates</strong></li>
+            <li><a href="http://twitter.com/getcloudapp/">Twitter</a></li>
+            <li><a href="http://blog.getcloudapp.com/">Blog</a></li>
+            <li><a href="http://help.getcloudapp.com/press/">Press</a></li>
+          </ul>
+
+          <ul>
+            <li><strong>Legal</strong></li>
+            <li><a href="http://help.getcloudapp.com/terms-of-service">Terms Of Service</a></li>
+            <li><a href="http://help.getcloudapp.com/privacy-policy">Privacy Policy</a></li>
+            <li><a href="http://help.getcloudapp.com/unlimited-policy">Unlimited Policy</a></li>
+          </ul>
+        </nav>
+
+        <p>
+          &copy;{{ "now" | date: "%Y" }} Linebreak S.L.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
