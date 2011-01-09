@@ -29,7 +29,7 @@
         <tbody>
           {% for item in cart.items %}
             <tr>
-              <td class="title"><a href="{{ item.product.url }}">{{ item.title }}</a></td>
+              <td class="title"><a href="/">{{ item.title }}</a></td>
               <td class="price">{{ item.price | money }}</td>
               <td class="quantity"><input id="updates-{{ item.variant.id }}" name="updates[{{item.variant.id}}]" onfocus="this.select();" type="text" value="{{ item.quantity }}" /></td>
               <td class="remove"><a href="#" onclick="remove_item({{ item.variant.id }}); return false;">Remove</a></td>
