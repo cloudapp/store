@@ -632,23 +632,23 @@ products:
 line_items:
   - &line_item-1
     id: 1
-    title: 'Arbor Draft'
+    title: 'CloudApp Pro - 1 year'
     subtitle: '151cm'
-    price: 29900
-    line_price: 29900
+    price: 4900
+    line_price: 4900
     quantity: 1
-    variant: *product-1-var-1
-    product: *product-1
+    variant: *product-7-var-1
+    product: *product-7
 
   - &line_item-2
     id: 2
-    title: 'Comic ~ Orange'
+    title: 'CloudApp Pro - 3 months'
     subtitle: '159cm'
-    price: 19900
-    line_price: 39800
+    price: 1500
+    line_price: 3000
     quantity: 2
-    variant: *product-4-var-1
-    product: *product-4
+    variant: *product-7-var-3
+    product: *product-7
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #   Link Lists
