@@ -9,7 +9,7 @@
         <fieldset>
           {% for variant in product.variants %}
             {% if variant.available %}
-              <label><input {% if forloop.first %}checked {% endif %}id="id" name="id" type="radio" value="{{ variant.id }}" /> {{ variant.title | escape }} &mdash; {{ variant.price | money }}</label>
+              <label><input {% if forloop.first %}checked {% endif %}id="pro-{{ variant.title | replace: ' ', '-' }}" name="id" type="radio" value="{{ variant.id }}" /> {{ variant.title | escape }} &mdash; {{ variant.price | money }}</label>
             {% endif %}
           {% endfor %}
         </fieldset>
@@ -18,6 +18,15 @@
           <input class="green" type="submit" value="Get {{ product.title }}" />
         </p>
       </form>
+
+      <script>
+        (function($) {
+          $(function() {
+            var hash = window.location.hash.replace(/#/, '');
+            $("#pro-" + hash).attr("checked", "checked");
+          });
+        }(jQuery));
+      </script>
     {% endfor %}
   </section>
 
