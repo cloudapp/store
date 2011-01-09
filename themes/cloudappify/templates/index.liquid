@@ -9,7 +9,7 @@
         <fieldset>
           {% for variant in product.variants %}
             {% if variant.available %}
-              <label><input id="id" name="id" type="radio" value="{{ variant.id }}" /> {{ variant.title | escape }} &mdash; {{ variant.price | money }}</label>
+              <label><input {% if forloop.first %}checked {% endif %}id="id" name="id" type="radio" value="{{ variant.id }}" /> {{ variant.title | escape }} &mdash; {{ variant.price | money }}</label>
             {% endif %}
           {% endfor %}
         </fieldset>
