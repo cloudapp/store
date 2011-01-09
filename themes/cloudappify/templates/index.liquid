@@ -5,11 +5,11 @@
         <h1>{{ product.title }}</h1>
       </hgroup>
 
-      <form>
+      <form action="/cart/add" method="post">
         <fieldset>
           {% for variant in product.variants %}
             {% if variant.available %}
-              <label><input name="plan" type="radio" /> {{ variant.title | escape }} &mdash; {{ variant.price | money }}</label>
+              <label><input id="id" name="id" type="radio" value="{{ variant.id }}" /> {{ variant.title | escape }} &mdash; {{ variant.price | money }}</label>
             {% endif %}
           {% endfor %}
         </fieldset>
