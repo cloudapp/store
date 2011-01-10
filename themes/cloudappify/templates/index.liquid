@@ -3,13 +3,29 @@
     {% for product in collections.frontpage.products limit: 1 %}
       <hgroup>
         <h1>{{ product.title }}</h1>
+
+        <p>
+          Experience the heavenliness of CloudApp Pro.
+        </p>
+
+        <ul id="free">
+          <li>10 uploads per day</li>
+          <li>25MB maximum file size</li>
+        </ul>
+
+        <ul id="pro">
+          <li>Unlimited uploads</li>
+          <li>Upload files up to 250MB</li>
+          <li>Customize your links with your own domain</li>
+        </ul>
       </hgroup>
 
       <form action="/cart/add" method="post">
         <fieldset>
           {% for variant in product.variants %}
             {% if variant.available %}
-              <label><input {% if forloop.first %}checked {% endif %}id="pro-{{ variant.title | replace: ' ', '-' }}" name="id" type="radio" value="{{ variant.id }}" /> {{ variant.title | escape }} &mdash; {{ variant.price | money }}</label>
+              {% capture id %}pro-{{ variant.title | replace: ' ', '-' }}{% endcapture %}
+              <label><input {% if forloop.first %}checked {% endif %}id="{{ id }}" name="id" type="radio" value="{{ variant.id }}" /> {{ variant.title | escape }}&thinsp;&mdash;&thinsp;{{ variant.price | money }}</label>
             {% endif %}
           {% endfor %}
         </fieldset>
@@ -31,20 +47,10 @@
   </section>
 
   <section id="description">
+<!--
     <div class="column">
       <h2>Turbocharge Your Account</h2>
 
-      <p>
-        Experience the heavenliness of CloudApp Pro and be blown away by:
-      </p>
-
-      <ul>
-        <li>Unlimited uploads (Free: 10 uploads per day)</li>
-        <li>Upload files up to 250MB (Free: 25MB per file)</li>
-        <li>Customize your links with your own domain</li>
-      </ul>
-
-<!--
       <p>
         CloudApp is free forever. There are no expiring trials, hidden charges or contracts. However if you want to share more than 10 uploads a day (25MB max. file size) you should turbocharge your account with CloudApp Pro:
       </p>
@@ -54,8 +60,8 @@
         <li>Up To 250MB Per Upload</li>
         <li>Use Your Own Domain</li>
       </ul>
--->
     </div>
+-->
 
     <div class="column">
       <h2>How Does It Work?</h2>
