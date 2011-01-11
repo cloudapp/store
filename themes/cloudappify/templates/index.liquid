@@ -1,13 +1,11 @@
 <section class="pie-clearfix" id="index">
   <section id="plans">
     {% for product in collections.frontpage.products limit: 1 %}
-      <hgroup>
-        <ul>
-          <li><span class="check">Share <span class="compare">10 files</span> <strong>unlimited files</strong> a day</span></li>
-          <li><span class="check">Upload files up to <span class="compare">25MB</span> <strong>500MB</strong></span></li>
-          <li><span class="check">Share links with <span class="compare">our</span> <strong>your own domain</strong></span></li>
-        </ul>
-      </hgroup>
+      <ul>
+        <li><span class="check">Share <span class="compare">10 files</span> <strong>unlimited files</strong> a day</span></li>
+        <li><span class="check">Upload files up to <span class="compare">25MB</span> <strong>500MB</strong></span></li>
+        <li><span class="check">Share links with <span class="compare">our</span> <strong>your own domain</strong></span></li>
+      </ul>
 
       <form action="/cart/add" method="post">
         <fieldset>

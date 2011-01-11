@@ -9,14 +9,10 @@
   text-align: center;
 }
 
-#index #plans hgroup {
-  background: url('index-hgroup-bg.png') center top no-repeat;
-  margin: 0 0 32px 0;
-  padding: 180px 0 0 0;
-}
-
 #index #plans ul {
+  background: url('index-hgroup-bg.png') center top no-repeat;
   list-style: none;
+  padding: 180px 0 0 0;
 }
 
 #index #plans ul li {
@@ -32,6 +28,10 @@
 #index #plans ul li .check .compare {
   color: #e5e5e5;
   text-decoration: line-through;
+}
+
+#index #plans form {
+  margin: 32px 0 0 0;
 }
 
 #index #plans form fieldset {
@@ -85,7 +85,7 @@
 }
 
 #index #faqs {
-  padding: 48px 0 0 0;
+  margin: 48px 0 0 0;
 }
 
 #index #faqs .row {
