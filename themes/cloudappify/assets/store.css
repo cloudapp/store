@@ -10,7 +10,7 @@
 }
 
 #index #plans hgroup {
-  background: url({{ 'index-hgroup-bg.png' | asset_url }}) center top no-repeat;
+  background: url('index-hgroup-bg.png') center top no-repeat;
   padding: 180px 0 0 0;
 }
 

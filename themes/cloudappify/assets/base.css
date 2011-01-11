@@ -4,7 +4,7 @@
 */
 
 body {
-  background: url({{'body-bg.png' | asset_url}}) repeat #d3d6d9;
+  background: url('body-bg.png') repeat #d3d6d9;
   color: #626262;
   font-family: "Helvetica Neue", Helvetica, Arial Geneva, sans-serif;
   font-size: 12px;
@@ -335,9 +335,9 @@ ul.highlight, ol.highlight {
     ---------------------------------------------- */
     #nav {
       background-color: #2f5577;
-      background-image: -moz-linear-gradient(top, rgba(151, 186, 216, .15), rgba(0, 0, 0, .15)), url({{ 'header-nav-bg.png' | asset_url }});
-      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(151, 186, 216, .15)), to(rgba(0, 0, 0, .15))), url({{ 'header-nav-bg.png' | asset_url }});
-      background-image: linear-gradient(top, rgba(151, 186, 216, .15), rgba(0, 0, 0, .15)), url({{ 'header-nav-bg.png' | asset_url }});
+      background-image: -moz-linear-gradient(top, rgba(151, 186, 216, .15), rgba(0, 0, 0, .15)), url('header-nav-bg.png');
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(151, 186, 216, .15)), to(rgba(0, 0, 0, .15))), url('header-nav-bg.png');
+      background-image: linear-gradient(top, rgba(151, 186, 216, .15), rgba(0, 0, 0, .15)), url('header-nav-bg.png');
       background-repeat: repeat;
       border-bottom: 4px solid #e5e5e5;
       -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, .1) inset;
@@ -379,7 +379,7 @@ ul.highlight, ol.highlight {
     }
 
     #hgroup h1 a:link, #hgroup h1 a:visited {
-      background: url({{'hgroup-logo.png' | asset_url}}) no-repeat;
+      background: url('hgroup-logo.png') no-repeat;
       display: block;
       height: 34px;
       text-indent: -99999px;
