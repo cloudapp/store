@@ -6,16 +6,12 @@
 body {
   background: url('body-bg.png') repeat #d3d6d9;
   color: #626262;
-  font-family: "Helvetica Neue", Helvetica, Arial Geneva, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial Geneva, sans-serif;
   font-size: 12px;
 }
 
 /* =headings
 ---------------------------------------------- */
-h1 {
-
-}
-
 h2 {
   font-size: 18px;
   margin: 0 0 14px 0;
@@ -245,6 +241,7 @@ form p:last-child {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     color: #aaa !important;
+    cursor: default;
     text-shadow: 0 1px 1px #fff !important;
   }
 
@@ -320,66 +317,71 @@ ul.highlight, ol.highlight {
 
 /* =layout
 ---------------------------------------------- */
+.wrapper {
+  margin: 0 auto;
+  width: 960px;
+}
+
+  /* =nav
+  ---------------------------------------------- */
+  #nav {
+    background-color: #2f5577;
+    background-image: -moz-linear-gradient(top, rgba(151, 186, 216, .15), rgba(0, 0, 0, .15)), url('header-nav-bg.png');
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(151, 186, 216, .15)), to(rgba(0, 0, 0, .15))), url('header-nav-bg.png');
+    background-image: linear-gradient(top, rgba(151, 186, 216, .15), rgba(0, 0, 0, .15)), url('header-nav-bg.png');
+    background-repeat: repeat;
+    border-bottom: 4px solid #e5e5e5;
+    -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, .1) inset;
+    -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, .1) inset;
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, .1) inset;
+  }
+
+  #nav ul {
+    margin: 0;
+    padding: 14px 0;
+    text-align: center;
+  }
+
+  #nav ul li {
+    display: inline-block;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    margin: 0 48px 0 0;
+  }
+
+  #nav ul li:last-child {
+    margin: 0;
+  }
+
+  #nav ul li a:link, #nav ul li a:visited {
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .33);
+  }
+  /* ------------------------------------------- */
+
+  /* =sheet
+  ---------------------------------------------- */
   #sheet {
     background: #fff;
     -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .15);
     -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .15);
     box-shadow: 0 1px 0 rgba(0, 0, 0, .15);
-  }
-
-  .wrapper {
-    margin: 0 auto;
-    width: 960px;
+    padding: 48px 0;
   }
 
     /* =header
     ---------------------------------------------- */
-    #nav {
-      background-color: #2f5577;
-      background-image: -moz-linear-gradient(top, rgba(151, 186, 216, .15), rgba(0, 0, 0, .15)), url('header-nav-bg.png');
-      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(151, 186, 216, .15)), to(rgba(0, 0, 0, .15))), url('header-nav-bg.png');
-      background-image: linear-gradient(top, rgba(151, 186, 216, .15), rgba(0, 0, 0, .15)), url('header-nav-bg.png');
-      background-repeat: repeat;
-      border-bottom: 4px solid #e5e5e5;
-      -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, .1) inset;
-      -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, .1) inset;
-      box-shadow: 0 -1px 1px rgba(0, 0, 0, .1) inset;
-    }
-
-    #nav ul {
-      margin: 0;
-      padding: 14px 0;
+    #header hgroup {
       text-align: center;
     }
 
-    #nav ul li {
-      display: inline-block;
-      font-size: 14px;
-      -webkit-font-smoothing: antialiased;
-      margin: 0 48px 0 0;
-    }
-
-    #nav ul li:last-child {
-      margin: 0;
-    }
-
-    #nav ul li a:link, #nav ul li a:visited {
-      color: #fff;
-      text-shadow: 0 1px 1px rgba(0, 0, 0, .33);
-    }
-
-    #hgroup {
-      padding: 32px 0;
-      text-align: center;
-    }
-
-    #hgroup h1 {
+    #header hgroup h1 {
       height: 34px;
       margin: 0 auto;
       width: 48px;
     }
 
-    #hgroup h1 a:link, #hgroup h1 a:visited {
+    #header hgroup h1 a:link, #header hgroup h1 a:visited {
       background: url('hgroup-logo.png') no-repeat;
       display: block;
       height: 34px;
@@ -387,7 +389,7 @@ ul.highlight, ol.highlight {
       width: 48px;
     }
 
-    #hgroup h2 {
+    #header hgroup h2 {
       color: #a7a7a7;
       -webkit-font-smoothing: antialiased;
       font-weight: normal;
@@ -398,9 +400,10 @@ ul.highlight, ol.highlight {
     /* =main
     ---------------------------------------------- */
     #main {
-      padding: 0 0 48px 0;
+      margin: 32px 0 0 0;
     }
     /* ------------------------------------------- */
+  /* ------------------------------------------- */
 
   /* =footer
   ---------------------------------------------- */
