@@ -201,6 +201,18 @@ product_variants:
     option1: black
     option2: large
     option3:
+  - &product-7-var-4
+    id: 19
+    title: 1 month
+    price: 500
+    weight: 200
+    compare_at_price:
+    available: true
+    inventory_quantity: 10
+    option1: black
+    option2: large
+    option3:
+    sku: CLPRO01
   - &product-8-var-1
     id: 20
     title: brown / small
@@ -547,6 +559,7 @@ products:
       - *product-7-var-1
       - *product-7-var-2
       - *product-7-var-3
+      - *product-7-var-4
 
   - &product-8
     id: 8
