@@ -10,7 +10,7 @@
 }
 
 #index #plans ul {
-  background: url('index-plans-ul-bg.png') center top no-repeat;
+  background: url({{ 'index-plans-ul-bg.png' | asset_url }}) center top no-repeat;
   list-style: none;
   padding: 180px 0 0 0;
 }
@@ -21,7 +21,7 @@
 }
 
 #index #plans ul li .check {
-  background: url('index-plans-ul-li-checkmark.png') left center no-repeat;
+  background: url({{ 'index-plans-ul-li-checkmark.png' | asset_url }}) left center no-repeat;
   padding: 0 24px;
 }
 
