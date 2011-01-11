@@ -13,7 +13,7 @@
         <fieldset>
           <div>
             {% for variant in product.variants %}
-              {% if variant.available && variant.sku != 'CLPRO01' %}
+              {% if variant.sku != 'CLPRO01' and variant.available  %}
                 {% capture id %}pro-{{ variant.title | replace: ' ', '-' }}{% endcapture %}
                 <label><input {% if forloop.first %}checked {% endif %}id="{{ id }}" name="id" type="radio" value="{{ variant.id }}" /> {{ variant.title | escape }}&thinsp;&mdash;&thinsp;{% if variant.compare_at_price %}<span class="compare">{{ variant.compare_at_price | money }}</span> {% endif %}{{ variant.price | money }}</label>
               {% endif %}
@@ -21,11 +21,13 @@
           </div>
         </fieldset>
 
-        {% if variant.available && variant.sku == 'CLPRO01' %}
-          <p>
-            <small>Have commitment issues? We also offer <a href="#">1 month for $5</a>.</small>
-          </p>
-        {% endif %}
+        {% for variant in product.variants %}
+          {% if variant.sku == 'CLPRO01' and variant.available %}
+            <p>
+              <small>Have commitment issues? We also offer <a href="#">1 month for $5</a>.</small>
+            </p>
+          {% endif %}
+        {% endfor %}
 
         <p>
           <input class="green" type="submit" value="Get CloudApp Pro" />

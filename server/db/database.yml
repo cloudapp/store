@@ -196,8 +196,8 @@ product_variants:
     price: 1500
     weight: 200
     compare_at_price:
-    available: true
-    inventory_quantity: 10
+    available: false
+    inventory_quantity: 0
     option1: black
     option2: large
     option3:
