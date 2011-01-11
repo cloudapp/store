@@ -11,21 +11,25 @@
         <fieldset>
           <div>
             {% for variant in product.variants %}
-              {% if variant.sku != 'CLPRO01' and variant.available  %}
-                {% capture id %}pro-{{ variant.title | replace: ' ', '-' }}{% endcapture %}
-                <label><input {% if forloop.first %}checked {% endif %}id="{{ id }}" name="id" type="radio" value="{{ variant.id }}" /> {{ variant.title | escape }}&thinsp;&mdash;&thinsp;{% if variant.compare_at_price %}<span class="compare">{{ variant.compare_at_price | money }}</span> {% endif %}{{ variant.price | money }}</label>
+              {% if variant.available %}
+                {% if variant.sku == 'CLPRO01' %}
+                  {% assign single = variant %}
+                {% else %}
+                  {% capture id %}pro-{{ variant.title | replace: ' ', '-' }}{% endcapture %}
+                  <label><input {% if forloop.first %}checked {% endif %}id="{{ id }}" name="id" type="radio" value="{{ variant.id }}" /> {{ variant.title | escape }}&thinsp;&mdash;&thinsp;{% if variant.compare_at_price %}<span class="compare">{{ variant.compare_at_price | money }}</span> {% endif %}{{ variant.price | money }}</label>
+                {% endif %}
               {% endif %}
             {% endfor %}
           </div>
         </fieldset>
 
-        {% for variant in product.variants %}
-          {% if variant.sku == 'CLPRO01' and variant.available %}
-            <p>
-              <small>Have commitment issues? We also offer <a href="#">1 month for $5</a>.</small>
-            </p>
-          {% endif %}
-        {% endfor %}
+        {% if single %}
+          <p>
+            <small>Have commitment issues? We also offer <a href="#1-month" id="1-month">1 month for $5</a>.</small>
+            {% capture id %}pro-{{ single.title | replace: ' ', '-' }}{% endcapture %}
+            <input id="{{ id }}" name="id" type="radio" value="{{ single.id }}" />
+          </p>
+        {% endif %}
 
         <p>
           <input class="green" type="submit" value="Get CloudApp Pro" />
@@ -37,6 +41,12 @@
           $(function() {
             var hash = window.location.hash.replace(/#/, '');
             $("#pro-" + hash).attr("checked", "checked");
+            $("#1-month").click(function(e) {
+              e.preventDefault();
+
+              $("#pro-1-month").attr("checked", "checked");
+              $(this).closest("form").submit();
+            });
           });
         }(jQuery));
       </script>
