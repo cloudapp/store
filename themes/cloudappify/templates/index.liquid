@@ -27,7 +27,7 @@
           <p>
             <small>Have commitment issues? We also offer <a href="#1-month" id="1-month">1 month for $5</a>.</small>
             {% capture id %}pro-{{ single.title | replace: ' ', '-' }}{% endcapture %}
-            <input id="{{ id }}" name="id" type="radio" value="{{ single.id }}" />
+            <input id="{{ id }}" name="id" style="display: none !important;" type="radio" value="{{ single.id }}" />
           </p>
         {% endif %}
 
