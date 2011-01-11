@@ -127,6 +127,15 @@
   width: 204px;
 }
 
+#cart aside + p {
+  border-top: 1px solid #e5e5e5;
+  color: #a7a7a7;
+  float: left;
+  text-align: center;
+  padding: 12px 0 0 0;
+  width: 724px;
+}
+
 #cart form {
   float: left;
   width: 724px;
