@@ -39,7 +39,7 @@
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  margin: 0 0 8px 0;
+  margin: 0;
   padding: 3px;
 }
 
@@ -72,7 +72,11 @@
 
 #index #plans form fieldset + p {
   color: #a7a7a7;
-  margin: 0 0 12px 0;
+  margin: 8px 0 0 0;
+}
+
+#index #plans form p:last-child {
+  margin: 12px 0 0 0;
 }
 
 #index #plans form p input[type="submit"] {
