@@ -215,6 +215,7 @@ form p:last-child {
     background: -moz-linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
     background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e3e3e3)) #e3e3e3;
     background: linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
+    cursor: pointer;
   }
 
   input[type="submit"]:focus {
