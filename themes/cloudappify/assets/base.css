@@ -146,7 +146,7 @@ form p:last-child {
     margin: 0;
   }
 
-  label + input[type="text"], label + input[type="password"], label + textarea, label + select {
+  label + input[type='text'], label + input[type='password'], label + textarea, label + select {
     display: block;
     margin: 4px 0 0 0;
   }
@@ -154,7 +154,7 @@ form p:last-child {
 
   /* =text inputs & text areas
   ---------------------------------------------- */
-  input[type="text"], input[type="password"], textarea {
+  input[type='text'], input[type='password'], textarea {
     border: 1px solid #ccc;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -163,7 +163,7 @@ form p:last-child {
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15) inset;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .15) inset;
     color: #424242;
-    font-family: Verdana, "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+    font-family: Verdana, 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
     font-size: 13px;
     outline: none;
     padding: 6px;
@@ -171,7 +171,7 @@ form p:last-child {
     -webkit-transition: border .2s linear, -webkit-box-shadow .2s linear;
   }
 
-  input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+  input[type='text']:focus, input[type='password']:focus, textarea:focus {
     border: 1px solid #80bfff;
     -moz-box-shadow: 0 0 3px #80bfff, 0 1px 2px rgba(0, 0, 0, .15) inset;
     -webkit-box-shadow: 0 0 3px #80bfff, 0 1px 2px rgba(0, 0, 0, .15) inset;
@@ -181,7 +181,7 @@ form p:last-child {
 
   /* =buttons
   ---------------------------------------------- */
-  input[type="submit"] {
+  input[type='submit'] {
     background: #eaeaea;
     background: -moz-linear-gradient(top, #efefef, #d8d8d8) #d8d8d8;
     background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#d8d8d8)) #d8d8d8;
@@ -195,7 +195,7 @@ form p:last-child {
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1), 0 1px 1px rgba(255, 255, 255, .8) inset;
     color: #707070;
     display: block;
-    font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
     font-size: 12px;
     -webkit-font-smoothing: antialiased;
     font-weight: bold;
@@ -206,7 +206,7 @@ form p:last-child {
     text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
   }
 
-  input[type="submit"]:hover {
+  input[type='submit']:hover {
     background: #f1f1f1;
     background: -moz-linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
     background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e3e3e3)) #e3e3e3;
@@ -214,7 +214,7 @@ form p:last-child {
     cursor: pointer;
   }
 
-  input[type="submit"]:focus {
+  input[type='submit']:focus {
     background: -moz-linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
     background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e3e3e3)) #e3e3e3;
     background: linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
@@ -224,7 +224,7 @@ form p:last-child {
     box-shadow: 0 0 3px #80bfff, 0 1px 1px rgba(255, 255, 255, .8) inset;
   }
 
-  input[type="submit"]:active {
+  input[type='submit']:active {
     background: #e3e3e3;
     background: -moz-linear-gradient(top, #e3e3e3, #f6f6f6) #1b468f;
     background: -webkit-gradient(linear, left top, left bottom, from(#e3e3e3), to(#f6f6f6)) #1b468f;
@@ -234,7 +234,7 @@ form p:last-child {
     box-shadow: none;
   }
 
-  input[type="submit"]:disabled {
+  input[type='submit']:disabled {
     background: #efefef !important;
     border: 1px solid #d1d1d1 !important;
     -moz-box-shadow: none !important;
@@ -247,7 +247,7 @@ form p:last-child {
 
     /* =green
     ---------------------------------------------- */
-    input[type="submit"].green {
+    input[type='submit'].green {
       background: #1fbf00;
       background: -moz-linear-gradient(top, #22d100, #19a500) #22d100;
       background: -webkit-gradient(linear, left top, left bottom, from(#22d100), to(#19a500)) #22d100;
@@ -260,20 +260,20 @@ form p:last-child {
       text-shadow: 0 -1px 1px rgba(0, 0, 0, .33);
     }
 
-    input[type="submit"]:hover.green {
+    input[type='submit']:hover.green {
       background: #22cc00;
       background: -moz-linear-gradient(top, #24d800, #1db200) #24d800;
       background: -webkit-gradient(linear, left top, left bottom, from(#24d800), to(#1db200)) #24d800;
       background: linear-gradient(top, #24d800, #1db200) #24d800;
     }
 
-    input[type="submit"]:focus.green {
+    input[type='submit']:focus.green {
       -moz-box-shadow: 0 0 3px #24d800, 0 1px 1px rgba(255, 255, 255, .25) inset;
       -webkit-box-shadow: 0 0 3px #24d800, 0 1px 1px rgba(255, 255, 255, .25) inset;
       box-shadow: 0 0 3px #24d800, 0 1px 1px rgba(255, 255, 255, .25) inset;
     }
 
-    input[type="submit"]:active.green {
+    input[type='submit']:active.green {
       background: #1fba00;
       background: -moz-linear-gradient(top, #1db200, #24d800) #1db200;
       background: -webkit-gradient(linear, left top, left bottom, from(#1db200), to(#24d800)) #1db200;
@@ -326,9 +326,9 @@ ul.highlight, ol.highlight {
   ---------------------------------------------- */
   #nav {
     background-color: #2f5577;
-    background-image: -moz-linear-gradient(top, rgba(151, 186, 216, .15), rgba(0, 0, 0, .15)), url('header-nav-bg.png');
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(151, 186, 216, .15)), to(rgba(0, 0, 0, .15))), url('header-nav-bg.png');
-    background-image: linear-gradient(top, rgba(151, 186, 216, .15), rgba(0, 0, 0, .15)), url('header-nav-bg.png');
+    background-image: -moz-linear-gradient(top, rgba(151, 186, 216, .15), rgba(0, 0, 0, .15)), url('nav-bg.png');
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(151, 186, 216, .15)), to(rgba(0, 0, 0, .15))), url('nav-bg.png');
+    background-image: linear-gradient(top, rgba(151, 186, 216, .15), rgba(0, 0, 0, .15)), url('nav-bg.png');
     background-repeat: repeat;
     border-bottom: 4px solid #e5e5e5;
     -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, .1) inset;
@@ -382,7 +382,7 @@ ul.highlight, ol.highlight {
     }
 
     #header hgroup h1 a:link, #header hgroup h1 a:visited {
-      background: url('hgroup-logo.png') no-repeat;
+      background: url('header-hgroup-logo.png') no-repeat;
       display: block;
       height: 34px;
       text-indent: -99999px;

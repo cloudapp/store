@@ -10,7 +10,7 @@
 }
 
 #index #plans ul {
-  background: url('index-hgroup-bg.png') center top no-repeat;
+  background: url('index-plans-ul-bg.png') center top no-repeat;
   list-style: none;
   padding: 180px 0 0 0;
 }
@@ -21,7 +21,7 @@
 }
 
 #index #plans ul li .check {
-  background: url('plans-feature-checkmark.png') left center no-repeat;
+  background: url('index-plans-ul-li-checkmark.png') left center no-repeat;
   padding: 0 24px;
 }
 
@@ -79,7 +79,7 @@
   margin: 12px 0 0 0;
 }
 
-#index #plans form p input[type="submit"] {
+#index #plans form p input[type='submit'] {
   display: inline;
   font-size: 18px;
 }
@@ -181,7 +181,7 @@
   width: 60px;
 }
 
-#cart form table tbody tr .quantity input[type="text"] {
+#cart form table tbody tr .quantity input[type='text'] {
   text-align: center;
   width: 46px;
 }
