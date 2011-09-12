@@ -61,14 +61,14 @@
               <h3><sup>$</sup>15.00</h3>
 
               <form action="/cart" method="post">
-                <input type="hidden" name="id" value="121825122" />
+                <input type="hidden" name="id" value="{{ settings.pro_3_months_variant_id }}" />
                 <input type="hidden" name="checkout" value="Checkout" />
                 <input type="submit" value="Go Pro">
               </form>
             </article>
 
             <form action="/cart" id="one-month" method="post">
-              <input type="hidden" name="id" value="121824992" />
+              <input type="hidden" name="id" value="{{ settings.pro_1_month_variant_id }}" />
               <input type="hidden" name="checkout" value="Checkout" />
               <input type="submit" value="Go Pro">
 
@@ -93,7 +93,7 @@
               </p>
 
               <form action="/cart" method="post">
-                <input type="hidden" name="id" value="121825142" />
+                <input type="hidden" name="id" value="{{ settings.pro_6_months_variant_id }}" />
                 <input type="hidden" name="checkout" value="Checkout" />
                 <input class="green" type="submit" value="Go Pro">
               </form>
@@ -111,7 +111,7 @@
               <h3><sup>$</sup>45.00</h3>
 
               <form action="/cart" method="post">
-                <input type="hidden" name="id" value="121825162" />
+                <input type="hidden" name="id" value="{{ settings.pro_12_months_variant_id }}" />
                 <input type="hidden" name="checkout" value="Checkout" />
                 <input type="submit" value="Go Pro">
               </form>
