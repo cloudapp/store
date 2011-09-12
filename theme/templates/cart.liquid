@@ -1,0 +1,127 @@
+{{ 'cart.js' | asset_url | script_tag }}
+
+<header class="row" id="header">
+  <hgroup class="span16">
+    <h1><a class="active" href="/">CloudApp</a></h1>
+
+    <h2><strong>Cloud</strong>App Pro</h2>
+  </hgroup>
+</header>
+
+<section class="row" id="features">
+  <ul class="span16">
+    <li><span class="check">Share <span class="compare">10 files</span> <strong>unlimited files</strong> a day</span></li>
+
+    <li><span class="check">Upload files up to <span class="compare">25MB</span> <strong>250MB</strong></span></li>
+
+    <li><span class="check">Share links with <span class="compare">our</span> <strong>your own domain</strong></span></li>
+  </ul>
+</section>
+
+<section id="plans">
+  <div class="row">
+    <div class="span4 offset2">
+      <article>
+        <h2>3 months</h2>
+
+        <p>
+          of <strong>Cloud</strong>App Pro
+        </p>
+
+        <h3><sup>$</sup>15.00</h3>
+
+        <form action="/cart" method="post">
+          <input type="hidden" name="id" value="121825122" />
+          <input type="hidden" name="checkout" value="Checkout" />
+          <input type="submit" value="Go Pro">
+        </form>
+      </article>
+
+      <form action="/cart" id="one-month" method="post">
+        <input type="hidden" name="id" value="121824992" />
+        <input type="hidden" name="checkout" value="Checkout" />
+        <input type="submit" value="Go Pro">
+
+        <p>
+          We also offer <a href="#">1 month for $5</a>.
+        </p>
+      </form>
+    </div>
+
+    <div class="promoted span4">
+      <article>
+        <h2>6 months</h2>
+
+        <p>
+          of <strong>Cloud</strong>App Pro
+        </p>
+
+        <h3><sup>$</sup>25.00</h3>
+
+        <p>
+          <strong>You save <span class="save"><sup>$</sup>5.00</span></strong>
+        </p>
+
+        <form action="/cart" method="post">
+          <input type="hidden" name="id" value="121825142" />
+          <input type="hidden" name="checkout" value="Checkout" />
+          <input class="green" type="submit" value="Go Pro">
+        </form>
+      </article>
+    </div>
+
+    <div class="span4">
+      <article>
+        <h2>12 months</h2>
+
+        <p>
+          of <strong>Cloud</strong>App Pro
+        </p>
+
+        <h3><sup>$</sup>45.00</h3>
+
+        <form action="/cart" method="post">
+          <input type="hidden" name="id" value="121825162" />
+          <input type="hidden" name="checkout" value="Checkout" />
+          <input type="submit" value="Go Pro">
+        </form>
+      </article>
+
+      <p>
+        Volume licenses? <a href="mailto:support@getcloudapp.com">Ask us</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="row" id="faqs">
+  <div class="span4 offset2">
+    <h3>How long are your contracts?</h3>
+
+    <p>
+      Contracts?! Who do you think we are? We want you to use CloudApp
+      because you can't live without it not because you're tied down by a
+      contract.
+    </p>
+  </div>
+
+  <div class="span4">
+    <h3>How do I cancel?</h3>
+
+    <p>
+      Easy. Do nothing! If you buy CloudApp Pro today and decide
+      somewhere down the road that we're not right for each other, simply
+      let your plan expire.
+    </p>
+  </div>
+
+  <div class="span4">
+    <h3>Unlimited?</h3>
+
+    <p>
+      You're not limited by total uploads or bandwidth. If you plan on
+      powering your piracy ring or YouTube competitor, we kindly ask that
+      you go elsewhere.
+    </p>
+  </div>
+</section>

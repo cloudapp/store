@@ -1,0 +1,72 @@
+// # Library
+
+// ## Clearing floats like a boss h5bp.com/q
+
+.clearfix {
+  zoom: 1;
+
+  &:before, &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// ## Grid
+
+@siteWidth: (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * @gridColumns);
+
+.columns(@columnSpan: 1) {
+  float: left;
+  margin: 0 @gridGutterWidth / 2;
+  width: (@gridColumnWidth * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1));
+}
+
+.container {
+  .clearfix();
+  margin: 0 auto;
+  width: @siteWidth;
+
+  // Show a grid when trying to debug alignment
+
+  &.debug {
+    background: url("grid-debug.png");
+  }
+}
+
+.offset(@columnOffset: 1) {
+  margin-left: (@gridColumnWidth + @gridGutterWidth) * @columnOffset + @gridGutterWidth / 2;
+}
+
+// # CSS3 Please
+
+.box-round(@radius) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+
+  // Useful if you don't want a background color from leaking outside the border
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.box-shadow(@shadow) {
+  -moz-box-shadow: @shadow;
+  -webkit-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+.box-gradient(@startColor, @endColor) {
+  background-color: @endColor;
+  background-image: -ms-linear-gradient(top, @startColor, @endColor); 
+  background-image: -moz-linear-gradient(top, @startColor, @endColor); 
+  background-image: -o-linear-gradient(top, @startColor, @endColor); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor)); 
+  background-image: -webkit-linear-gradient(top, @startColor, @endColor); 
+  background-image: linear-gradient(top, @startColor, @endColor);
+}
+

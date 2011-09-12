@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>CloudApp — Pro</title>
+
+  {{ 'styles.css' | asset_url | stylesheet_tag }}
+
+  {{ 'jquery-1.6.3.min.js' | asset_url | script_tag }}
+  {{ 'modernizr.js' | asset_url | script_tag }}
+  {{ 'selectivizr.js' | asset_url | script_tag }}
+
+  {{ content_for_header }}
+</head>
+
+<body>
+  <nav id="nav">
+    <div class="container">
+      <ul class="row">
+        <li class="span2 offset5"><a href="http://my.cl.ly">Drops</a></li>
+
+        <li class="span2"><a href="http://my.cl.ly/account">Account</a></li>
+
+        <li class="span2"><a href="http://my.cl.ly/logout">Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="base">
+    <div class="container">
+      {{ content_for_layout }}
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="container">
+      <nav class="row">
+        <ul class="span3">
+          <li><strong>CloudApp</strong></li>
+          <li><a href="http://getcloudapp.com/download/">Application</a></li>
+          <li><a href="http://store.getcloudapp.com/">Store</a></li>
+          <li><a href="http://developer.getcloudapp.com/">Developer</a></li>
+        </ul>
+
+        <ul class="span3">
+          <li><strong>Help</strong></li>
+          <li><a href="http://support.getcloudapp.com/kb/">FAQs</a></li>
+          <li><a href="http://support.getcloudapp.com/discussions/help">Support</a></li>
+          <li><a href="http://support.getcloudapp.com/kb/company/contact/">Contact Us</a></li>
+        </ul>
+
+        <ul class="span3">
+          <li><strong>Updates</strong></li>
+          <li><a href="http://blog.getcloudapp.com/">Blog</a></li>
+          <li><a href="http://twitter.com/cloudapp/">Twitter</a></li>
+        </ul>
+
+        <ul class="span3">
+          <li><strong>Legal</strong></li>
+          <li><a href="http://support.getcloudapp.com/kb/site-policy/terms-of-service/">Terms Of Service</a></li>
+          <li><a href="http://support.getcloudapp.com/kb/site-policy/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="http://support.getcloudapp.com/kb/site-policy/unlimited-policy/">Unlimited Policy</a></li>
+        </ul>
+
+        <ul class="span3 offset1">
+          <li>&copy; {{ "now" | date: "%Y" }} Linebreak S.L.</li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
