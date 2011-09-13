@@ -35,6 +35,11 @@ task :update_css_asset_paths do
   end
 end
 
+desc 'Archive the theme directory suitible to hand over to Shopify'
+task :zip do
+  `zip -rT cloudappify.zip theme`
+end
+
 def write_theme(content)
   File.open(File.join('theme', 'layout', 'theme.liquid'), 'w') do |theme|
     theme.write content
