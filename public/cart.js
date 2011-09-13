@@ -20,21 +20,6 @@
   // the cart attributes.
   var email = $.parseQueryString().email;
 
-  if (email) {
-    $(document)
-      .queue("cartAjax", function() {
-        $.post("/cart/update.js", { "attributes[email]": email }, function() {
-          $(document).dequeue("cartAjax");
-        }, 'json');
-      })
-
-      .dequeue("cartAjax");
-
-    // Attach the CloudApp user's email to the cart to auto-apply this purchase
-    // to their account after the checkout is complete.
-    $(function() { $("input[name='attributes[email]']").val(email); });
-  }
-
   $(function() {
     $("form").submit(function() {
       var form      = $(this),
@@ -42,7 +27,9 @@
 
       form.addClass("loading");
 
-      // This doesn't work yet, but it's close.
+      // Clear any products from the cart, add one of the the selected product
+      // to the cart, tack on the owner's CloudApp email address if present, and
+      // hop over to the checkout page.
       $(document)
         .queue("cartAjax", function() {
           $.post("/cart/clear.js", function() {
@@ -52,14 +39,29 @@
 
         .queue("cartAjax", function() {
           $.post("/cart/add.js", { id: productID }, function() {
-            window.location = "/checkout"
+            $(document).dequeue("cartAjax");
           }, 'json');
+        })
+
+        .queue("cartAjax", function() {
+          if (email) {
+            $.post("/cart/update.js", { "attributes[email]": email }, function() {
+              $(document).dequeue("cartAjax");
+            }, 'json');
+          } else {
+            $(document).dequeue("cartAjax");
+          }
+        })
+
+        .queue("cartAjax", function() {
+          window.location = "/checkout"
         })
         .dequeue("cartAjax");
 
       return false;
     });
 
+    // Catch click on the one-month link and submit its parent form.
     $("#one-month a").click(function() {
       $(this).closest("form").submit();
       return false;
