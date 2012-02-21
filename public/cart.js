@@ -23,7 +23,8 @@
   $(function() {
     $("form").submit(function() {
       var form      = $(this),
-          productID = form.find("input[name=id]").val();
+          productID = form.find("input[name=id]").val(),
+          quantity  = parseInt(form.find("input[name=quantity]").val(), 10) || 1;
 
       form.addClass("loading");
 
@@ -38,7 +39,10 @@
         })
 
         .queue("cartAjax", function() {
-          $.post("/cart/add.js", { id: productID }, function() {
+          params = { id: productID };
+          if (quantity) { params.quantity = quantity; }
+
+          $.post("/cart/add.js", params, function() {
             $(document).dequeue("cartAjax");
           }, 'json');
         })
@@ -64,6 +68,12 @@
     // Catch click on the one-month link and submit its parent form.
     $("#one-month a").click(function() {
       $(this).closest("form").submit();
+      return false;
+    });
+
+    // Show quantity fields.
+    $("#quantity").click(function() {
+      $("#plans").toggleClass("quantity");
       return false;
     });
   });

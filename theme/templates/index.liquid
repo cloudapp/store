@@ -28,9 +28,10 @@
           of <strong>Cloud</strong>App Pro
         </p>
 
-        <h3><sup>$</sup>15.00</h3>
-
         <form action="/cart" method="post">
+          <input type="text" name="quantity" value="1" />
+          <h3><sup>$</sup>15.00</h3>
+
           <input type="hidden" name="id" value="{{ settings.pro_3_months_variant_id }}" />
           <input type="hidden" name="checkout" value="Checkout" />
           <input type="submit" value="Go Pro">
@@ -56,13 +57,14 @@
           of <strong>Cloud</strong>App Pro
         </p>
 
-        <h3><sup>$</sup>25.00</h3>
-
-        <p>
-          <strong>You save <span class="save"><sup>$</sup>5.00</span></strong>
-        </p>
-
         <form action="/cart" method="post">
+          <input type="text" name="quantity" value="1" />
+          <h3><sup>$</sup>25.00</h3>
+
+          <p>
+            <strong>You save <span class="save"><sup>$</sup>5.00</span></strong>
+          </p>
+
           <input type="hidden" name="id" value="{{ settings.pro_6_months_variant_id }}" />
           <input type="hidden" name="checkout" value="Checkout" />
           <input class="green" type="submit" value="Go Pro">
@@ -78,9 +80,10 @@
           of <strong>Cloud</strong>App Pro
         </p>
 
-        <h3><sup>$</sup>45.00</h3>
-
         <form action="/cart" method="post">
+          <input type="text" name="quantity" value="1" />
+          <h3><sup>$</sup>45.00</h3>
+
           <input type="hidden" name="id" value="{{ settings.pro_12_months_variant_id }}" />
           <input type="hidden" name="checkout" value="Checkout" />
           <input type="submit" value="Go Pro">
@@ -88,7 +91,7 @@
       </article>
 
       <p>
-        Volume licenses? <a href="mailto:support@getcloudapp.com">Ask us</a>.
+        <a id="quantity" href="#">Buying a few plans?</a>
       </p>
     </div>
   </div>
