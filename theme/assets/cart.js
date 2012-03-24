@@ -24,7 +24,9 @@
     $("form").submit(function() {
       var form      = $(this),
           productID = form.find("input[name=id]").val(),
-          quantity  = parseInt(form.find("input[name=quantity]").val(), 10) || 1;
+          quantity  = parseInt(form.find("input[name=quantity]").val(), 10);
+
+      if (isNaN(quantity) || quantity < 1) { quantity = 1; }
 
       form.addClass("loading");
 
@@ -48,8 +50,9 @@
         })
 
         .queue("cartAjax", function() {
-          if (email) {
-            $.post("/cart/update.js", { "attributes[email]": email }, function() {
+          if (quantity > 1 || email) {
+            attributes = { "attributes[email]": (quantity > 1 ? null : email) }
+            $.post("/cart/update.js", attributes, function() {
               $(document).dequeue("cartAjax");
             }, 'json');
           } else {
